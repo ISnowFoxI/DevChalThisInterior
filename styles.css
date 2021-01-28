@@ -1,0 +1,264 @@
+/*
+font-family: 'Crimson Pro', serif;
+font-family: 'Lora', serif;
+font-family: 'Montserrat', sans-serif;
+*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 300;
+    background: #181719;
+    color: white;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    width: auto;
+    margin: 1.9rem 1.2rem;
+}
+
+.logo-name {
+    display: inline-block;
+    border: 0.1rem solid white;
+    padding: 0.8rem;
+    font-family: 'Crimson Pro', serif;
+    font-weight: 200;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+}
+
+.hamburger-btn {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    width: 2.85rem;
+    height: 1.9rem;
+    z-index: 2;
+}
+
+.hamburger-btn:hover {
+    cursor: pointer;
+    transition: none;
+    transition: all 0.1s ease-in-out;
+    transform: scale(1.1);
+}
+
+.hamburger-icon {
+    display: inline-block;
+    height: 0.4rem;
+    width: 2.85rem;
+    background-color: white;
+    vertical-align: middle;
+}
+
+.hamburger-icon::before, .hamburger-icon::after {
+    content: '';
+    position: absolute;
+    height: 0.4rem;
+    width: 2.85rem;
+    background-color: white;
+    transition: all 0.5s ease-in-out;
+}
+
+.hamburger-icon::before {
+    transform: translateY(-0.75rem);
+}
+
+.hamburger-icon::after {
+    transform: translateY(0.75rem);
+}
+
+.nav-list {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 1.8rem;
+    display: none;
+    position: absolute;
+    transition: all 0.3 ease-in-out;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #181719;
+    z-index: 1;
+}
+
+.nav-list-open {
+    display: block;
+}
+
+.nav-ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.nav-link {
+    display: block;
+    color: white;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 1.6rem 0;
+}
+
+.nav-link a {
+    text-decoration: none;
+    transition: all 0.1s ease-in-out;
+}
+
+.nav-link a:hover {
+    font-weight: 700;
+    transform: scale(1.2);
+}
+
+.head-line {
+    font-family: 'Lora', serif;
+    font-weight: 400;
+    font-size: 3.6rem;
+    margin: 0 1.2rem;
+}
+
+.welcome-text {
+    margin-top: 2.5rem;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    margin-left: 1.2rem;
+    width: 25rem;
+}
+
+.link-read-more {
+    display: block;
+    font-weight: 600;
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: white;
+    margin: 2.5rem 1.2rem;
+    width: fit-content;
+}
+
+.link-read-more::after {
+    content: '→';
+    margin-left: 1.5rem;
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.link-read-more:hover {
+    transform: scale(1.1);
+}
+
+.image-container {
+    margin: 0 2vw;
+    width: 96vw;
+    text-align: center;
+}
+
+.image-container .interior-desing {
+    width: 100%;
+}
+
+.image-container .author-container {
+    position: relative;
+    box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+    bottom: 6.9rem;
+    background-color: #181719;
+    width: 80vw;
+    height: 13.8rem;
+    margin: 0 auto;
+    padding: 1.5rem 1.9rem;
+    text-align: left;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 1fr 1.5fr;
+    grid-template-areas: "image authName" "image authSubTitle" "creditText creditText";
+}
+
+.image-container .author-container img {
+    grid-area: image;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+}
+
+.image-container .author-container .author-name {
+    grid-area: authName;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+.image-container .author-container .author-sub-text {
+    grid-area: authSubTitle;
+    font-size: 1rem;
+    color: #828282;
+}
+
+.image-container .author-container .author-name, .image-container .author-container .author-sub-text {
+    font-weight: 500;
+}
+
+.image-container .author-container .credit-text {
+    grid-area: creditText;
+}
+
+.image-container .author-container .credit-text {
+    font-family: 'Lora', serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    width: 21rem;
+    margin-top: 0.8rem;
+    line-height: 3rem;
+}
+
+.footer {
+    padding: 1rem;
+    position: relative;
+    display: block;
+    margin-top: auto;
+    bottom: 0;
+    margin-bottom: 1.4rem;
+    
+}
+.footer .footer-decoration { 
+    border: 0.1rem solid #A9A9A9;
+    width: 60vw;
+    margin: 0 auto;
+}
+
+.footer p {
+    margin-top: 1rem;
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
+.footer p a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer p a:hover {
+    color: #CC5748;
+    text-decoration: none;
+}
