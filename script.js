@@ -12,8 +12,4 @@ else {
     navBar.classList.remove('nav-list-open');
     menuStatus=false;
 }
-
-})
-}
-
-)();
+})})();
